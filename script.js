@@ -10,7 +10,7 @@ const dandt = document.getElementById('daydate');
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const date = new Date();
 const day = days[date.getDay()];
-
+//final try
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     if(response.status == 404){
