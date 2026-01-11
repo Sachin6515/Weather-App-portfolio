@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="head">
+        <img src="images/Logo.png">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero-section">
+        <div class="search">
+            <input type="text" placeholder="Enter city name...">
+            <button id="btn">Search</button>
+        </div>
+        <div class="temp">
+            <h2 id="city">Location</h2>
+            <h4 id="daydate">Monday,April 12</h4>
+            <div class="temperature">
+                <img class="today" src="images/Sunny1.png">
+                <ul>
+                   <li>
+                     <h1 id="tempnumber">18&deg;C</h1>
+                   </li>
+                   <li>
+                     <h3 id="weathertype">Sunny</h3>
+                   </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="addInfo">
+                    
+                        <li>
+                            <img src="images/Humidity.png">
+                            <h5 id="humidity">Humidity: 65%</h5>
+                        </li>
+                        <li>
+                            <img src="images/wind.png">
+                            <h5 id="wind">Wind: 8 Km/h</h5>
+                        </li>
+                        <li>
+                            <img src="images/pressure.png">
+                            <h5 id="pressure">Pressure: 1015 HPa</h5>
+                        </li>
+                  
+        </div>
+        <div class="forecast-container">
+           <div class="heading">
+            <h3>5 Day Forecast</h3>
+           </div>
+          <div class="items">
+           <div class="forecast-item active">
+              <span class="day">Today</span>
+              <img class="today size" src="images/Sunny1.png">
+              <span class="temp">18°</span>
+            </div>
+
+            <div class="forecast-item">
+              <span class="day day2">Wed</span>
+              <img class="two size" src="images/Sunny1.png">
+              <span class="temp temp2">16°</span>
+            </div>
+
+            <div class="forecast-item">
+              <span class="day day3">Thu</span>
+              <img class="three size" src="images/Sunny1.png">
+              <span class="temp temp3">12°</span>
+            </div>
+
+            <div class="forecast-item">
+              <span class="day day4">Fri</span>
+              <img class="four size" src="images/Sunny1.png">
+              <span class="temp temp4">15°</span>
+            </div>
+
+            <div class="forecast-item">
+              <span class="day day5">Sat</span>
+              <img class="five size" src="images/Sunny1.png">
+              <span class="temp temp5">11°</span>
+            </div>
+           </div>  
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 WeatherNow. Designed by <strong>YourName</strong>.</p>
+        <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a></p>
+    </footer>
+
+    <script src="apikey.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
