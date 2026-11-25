@@ -352,6 +352,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.footer-note {
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
 
 /* =====================================
    11. TABLET RESPONSIVENESS
