@@ -72,28 +72,22 @@ async function checkWeather(city) {
 
         const todayIcon = data.weather[0].icon;
 
-        document.getElementsByClassName("today")[0].src =
-            `https://openweathermap.org/img/wn/${todayIcon}@2x.png`;
+        document.getElementsByClassName("today")[0].src = `https://openweathermap.org/img/wn/${todayIcon}@2x.png`;
 
         temperature.textContent = Math.round(data.main.temp) + "℃";
+        document.querySelector(".forecast-item.active .temp").textContent = Math.round(data.main.temp) + "℃";
 
-        document.getElementById("weathertype").textContent =
-            data.weather[0].description;
+        document.getElementById("weathertype").textContent = data.weather[0].description;
 
-        dandt.textContent =
-            day + ", " + today.toLocaleDateString();
+        dandt.textContent = day + ", " + today.toLocaleDateString();
 
-        document.getElementsByClassName("today")[1].src =
-            `https://openweathermap.org/img/wn/${todayIcon}@2x.png`;
+        document.getElementsByClassName("today")[1].src = `https://openweathermap.org/img/wn/${todayIcon}@2x.png`;
 
-        document.getElementById("humidity").textContent =
-            data.main.humidity + "%";
+        document.getElementById("humidity").textContent = data.main.humidity + "%";
 
-        document.getElementById("wind").textContent =
-            data.wind.speed + " m/s";
+        document.getElementById("wind").textContent = data.wind.speed + " m/s";
 
-        document.getElementById("pressure").textContent =
-            data.main.pressure + " hPa";
+        document.getElementById("pressure").textContent = data.main.pressure + " hPa";
 
         hideError();
 
