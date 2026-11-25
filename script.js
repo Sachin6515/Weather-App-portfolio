@@ -48,7 +48,7 @@ function hideError() {
     }
 
     if (weatherElement) {
-        weatherElement.style.display = "block";
+        weatherElement.style.display = "flex";
     }
 }
 
