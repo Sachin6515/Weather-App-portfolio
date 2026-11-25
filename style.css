@@ -1,7 +1,7 @@
 
-/* =========================
+/* ================================
    1. BASE
-========================= */
+===================================== */
 
 * {
     margin: 0;
@@ -14,12 +14,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     background: linear-gradient(135deg, #09203f, #176b9c, #38a3c9);
-    background-attachment: fixed;
 }
 
-/* ============================
+
+/* =====================================
    2. HEADER
-========================= */
+===================================== */
 
 .head {
     width: 100%;
@@ -44,7 +44,7 @@ body {
 }
 
 .head nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
@@ -55,9 +55,10 @@ body {
     color: #a8e5ff;
 }
 
-/* =========================
+
+/* =======================================
    3. MAIN CONTAINER
-========================= */
+===================================== */
 
 .hero-section {
     width: 90%;
@@ -65,16 +66,17 @@ body {
     margin: 35px auto;
 }
 
-/* ========================
+
+/* =================================
    4. SEARCH BAR
-========================= */
+===================================== */
 
 .search {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 500px;
-    margin: 0 auto 35px;
+    margin: 0 auto 30px;
     gap: 10px;
 }
 
@@ -85,7 +87,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     outline: none;
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffffff;
     color: #18344f;
     font-size: 15px;
 }
@@ -100,7 +102,7 @@ body {
     border: none;
     border-radius: 30px;
     background: #075ca8;
-    color: white;
+    color: #ffffff;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -117,9 +119,10 @@ body {
     cursor: not-allowed;
 }
 
-/* =========================
+
+/* =====================================
    5. ERROR MESSAGE
-========================= */
+===================================== */
 
 .error {
     max-width: 500px;
@@ -133,25 +136,29 @@ body {
     font-size: 14px;
 }
 
-/* =========================
-   6. WEATHER SECTION
-========================= */
+
+/* =====================================
+   6. WEATHER MAIN LAYOUT
+===================================== */
+
+/* Flex column keeps all sections separated */
 
 .weather {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 /* Current weather card */
 
 .weather > .temp {
-    grid-column: 1 / -1;
-    padding: 30px 20px;
+    width: 100%;
+    padding: 35px 20px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.13);
     backdrop-filter: blur(12px);
 }
 
@@ -167,7 +174,10 @@ body {
     font-weight: normal;
 }
 
-/* Temperature and icon */
+
+/* =====================================
+   7. TEMPERATURE AND WEATHER ICON
+===================================== */
 
 .temperature {
     display: flex;
@@ -201,12 +211,13 @@ body {
     text-transform: capitalize;
 }
 
-/* =========================
-   7. WEATHER DETAILS
-========================= */
+
+/* =====================================
+   8. WEATHER DETAIL CARDS
+===================================== */
 
 .addInfo {
-    grid-column: 1 / -1;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -214,6 +225,7 @@ body {
 
 .addInfo li {
     min-width: 0;
+    min-height: 110px;
     padding: 20px 12px;
     display: flex;
     flex-direction: column;
@@ -223,9 +235,15 @@ body {
     list-style: none;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.13);
     backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.addInfo li:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-3px);
 }
 
 .addInfo img {
@@ -240,12 +258,13 @@ body {
     overflow-wrap: anywhere;
 }
 
-/* =========================
-   8. FORECAST SECTION
-========================= */
+
+/* =====================================
+   9. FIVE DAY FORECAST
+===================================== */
 
 .forecast-container {
-    grid-column: 1 / -1;
+    width: 100%;
     padding: 25px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
@@ -265,7 +284,7 @@ body {
 
 .items {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px;
 }
 
@@ -308,9 +327,10 @@ body {
     font-weight: bold;
 }
 
-/* =========================
-   9. FOOTER
-========================= */
+
+/* =====================================
+   10. FOOTER
+===================================== */
 
 footer {
     margin-top: 45px;
@@ -332,9 +352,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* =========================
-   10. TABLET RESPONSIVENESS
-========================= */
+
+/* =====================================
+   11. TABLET RESPONSIVENESS
+===================================== */
 
 @media (max-width: 768px) {
 
@@ -381,9 +402,10 @@ footer a:hover {
     }
 }
 
-/* =========================
-   11. MOBILE RESPONSIVENESS
-========================= */
+
+/* =====================================
+   12. MOBILE RESPONSIVENESS
+===================================== */
 
 @media (max-width: 480px) {
 
@@ -425,12 +447,10 @@ footer a:hover {
     }
 
     .weather {
-        grid-template-columns: 1fr;
         gap: 14px;
     }
 
     .weather > .temp {
-        grid-column: auto;
         padding: 25px 12px;
     }
 
@@ -457,12 +477,12 @@ footer a:hover {
     }
 
     .addInfo {
-        grid-column: auto;
         grid-template-columns: 1fr;
         gap: 10px;
     }
 
     .addInfo li {
+        min-height: 75px;
         flex-direction: row;
         justify-content: flex-start;
         padding: 13px 20px;
@@ -478,7 +498,6 @@ footer a:hover {
     }
 
     .forecast-container {
-        grid-column: auto;
         padding: 15px 10px;
     }
 
@@ -514,9 +533,10 @@ footer a:hover {
     }
 }
 
-/* =========================
-   12. SMALL MOBILE SCREENS
-========================= */
+
+/* =====================================
+   13. SMALL MOBILE SCREENS
+===================================== */
 
 @media (max-width: 350px) {
 
@@ -542,6 +562,6 @@ footer a:hover {
     }
 
     .items {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
